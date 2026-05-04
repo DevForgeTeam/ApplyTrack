@@ -12,4 +12,4 @@ Helps users track job applications, rejections, and accepted offers in one place
 - Simple overview dashboard (later)
 
 ## Status
-Early development phase 🚀 
+Early development phase 
