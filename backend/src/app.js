@@ -1,11 +1,13 @@
-const db = require("./db");
 const express = require("express");
 const app = express();
+const applicationRoutes = require("./routes/applicationRoutes");
+require("./db");
 
-// Middleware
-app.use(express.json()); 
+app.use(express.json());
 
-// Test route
+// Use application routes
+app.use("/api/applications", applicationRoutes);
+
 app.get("/", (req, res) => {
     res.send("ApplyTrack backend is running");
 });
