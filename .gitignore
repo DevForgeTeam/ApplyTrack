@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 #MacOS
 .DS_Store
+
+# Ignore the SQLite database file
+database/applytrack.sqlite
