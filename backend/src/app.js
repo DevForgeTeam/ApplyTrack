@@ -1,11 +1,18 @@
 const express = require("express");
-
 const app = express();
+const applicationRoutes = require("./routes/applicationRoutes");
+require("./db");
+
+app.use(express.json());
+
+// Use application routes
+app.use("/api/applications", applicationRoutes);
 
 app.get("/", (req, res) => {
-  res.send("ApplyTrack backend is running ");
+    res.send("ApplyTrack backend is running");
 });
 
-app.listen(5001, () => {
-  console.log("Server: http://localhost:5001");
+const PORT = 5001;
+app.listen(PORT, () => {
+    console.log(`Server: http://localhost:${PORT}`);
 });
